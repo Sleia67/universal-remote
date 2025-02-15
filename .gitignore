@@ -1,5 +1,7 @@
 node_modules/
-.env
+.expo/
+dist/
+npm-debug.*
 *.jks
 *.p8
 *.p12
@@ -7,3 +9,5 @@ node_modules/
 *.mobileprovision
 *.orig.*
 web-build/
+.env
+.DS_Store

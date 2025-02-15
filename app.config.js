@@ -1,6 +1,6 @@
 export default {
-  name: process.env.APP_NAME || "YourAppName",
-  slug: process.env.APP_SLUG || "your-app-name",
+  name: process.env.APP_NAME || "UniversalRemote",
+  slug: process.env.APP_SLUG || "universal-remote",
   version: "1.0.0",
   orientation: "portrait",
   icon: "./src/assets/icon.png",
@@ -31,5 +31,10 @@ export default {
     eas: {
       projectId: process.env.EAS_PROJECT_ID
     }
+  },
+  // Add these new settings
+  scheme: "universalremote",
+  experiments: {
+    newArchEnabled: true
   }
 }
