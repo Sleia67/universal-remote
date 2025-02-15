@@ -36,6 +36,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a4cc5b27-8e6b-463d-97ad-56511ae52f0d"
+      }
+    },
+    "owner": "sleia"
   }
 }
