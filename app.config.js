@@ -1,9 +1,10 @@
 export default {
-  name: process.env.APP_NAME || "UniversalRemote",
-  slug: process.env.APP_SLUG || "universal-remote",
+  name: process.env.APP_NAME || "IrUniRemote",
+  slug: process.env.APP_SLUG || "ir-uni-remote",
   version: "1.0.0",
   orientation: "portrait",
   icon: "./src/assets/icon.png",
+  userInterfaceStyle: "automatic",
   splash: {
     image: "./src/assets/splash.png",
     resizeMode: "contain",
@@ -29,12 +30,7 @@ export default {
   },
   extra: {
     eas: {
-      projectId: process.env.EAS_PROJECT_ID
+      projectId: "725c8278-43d8-420b-8263-0f7d1ff90763"
     }
-  },
-  // Add these new settings
-  scheme: "universalremote",
-  experiments: {
-    newArchEnabled: true
   }
-}
+};
