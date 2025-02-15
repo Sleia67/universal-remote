@@ -12,7 +12,13 @@ export const RemoteButton = ({ onPress, title, style, type = 'default' }) => (
     ]}
     onPress={onPress}
   >
-    <Text style={[styles.buttonText, styles[`${type}Text`]]} numberOfLines={1}>{title}</Text>
+    <Text 
+      style={[styles.buttonText, styles[`${type}Text`]]} 
+      numberOfLines={1} 
+      adjustsFontSizeToFit
+    >
+      {title}
+    </Text>
   </Pressable>
 );
 
@@ -31,7 +37,7 @@ const styles = StyleSheet.create({
     elevation: 1,
   },
   buttonText: {
-    fontSize: 15,
+    fontSize: 18,  // Increased base font size
     fontWeight: 'bold',
     color: 'white',
   },
@@ -43,24 +49,26 @@ const styles = StyleSheet.create({
   },
   power: {
     backgroundColor: '#dc3545',
-    width: 140,        // Even wider
-    height: 50,        // Slightly taller
-    borderRadius: 25,  // More oval shape
-    paddingHorizontal: 20, // Add horizontal padding
+    width: 160,
+    height: 55,
+    borderRadius: 15,
+    paddingHorizontal: 10,
   },
   powerPressed: {
     backgroundColor: '#c82333',
   },
   powerText: {
-    fontSize: 18,      // Larger text for better visibility
+    fontSize: 22,  // Slightly larger for power
     textAlign: 'center',
-    width: '100%',     // Ensure text uses full width
   },
   volume: {
     backgroundColor: '#28a745',
   },
   volumePressed: {
     backgroundColor: '#218838',
+  },
+  volumeText: {
+    fontSize: 18,  // Consistent size for volume
   },
   channel: {
     backgroundColor: '#ffc107',
@@ -70,6 +78,7 @@ const styles = StyleSheet.create({
   },
   channelText: {
     color: '#000000',
+    fontSize: 18,  // Consistent size for channel
   },
   device: {
     backgroundColor: '#6c757d',
@@ -81,7 +90,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#5a6268',
   },
   deviceText: {
-    fontSize: 13,
+    fontSize: 16,  // Increased device text size
   },
 });
 
